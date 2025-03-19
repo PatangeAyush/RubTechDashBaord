@@ -17,10 +17,10 @@ namespace RubTechDashBaord
             }
         }
 
-        protected void btn_Logout(object sender, EventArgs e)
+        protected void LinkButton1_Click(object sender, EventArgs e)
         {
             Session.Clear();
-            Session.Abandon(); 
+            Session.Abandon();
             Response.Redirect("index.aspx"); // 🔄 Register Page pe bhejna
         }
     }
