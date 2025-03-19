@@ -1,0 +1,92 @@
+﻿/* Full-Screen Centered Layout */
+body {
+    background: linear-gradient(to right, rgb(255, 166, 55), rgb(0, 92, 19)); /* Orange to Dark Green Gradient */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Login Container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Login Card */
+.login-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+    padding: 35px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+    /* Hover Effect (No Upward Movement) */
+    .login-card:hover {
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+        transform: scale(1.02); /* Subtle Zoom Effect */
+    }
+
+/* Logo Styling */
+.logo-container {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 150px;
+}
+
+/* Form Inputs */
+.form-control {
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+    /* Input Focus Effect */
+    .form-control:focus {
+        border-color: #28a745;
+        box-shadow: 0px 0px 10px rgba(40, 167, 69, 0.5);
+        outline: none;
+    }
+
+/* Login Button */
+.btn-primary {
+    background-color: #28a745;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+}
+
+    /* Button Hover Effect */
+    .btn-primary:hover {
+        background-color: #218838;
+        transform: scale(1.05);
+    }
+
+/* Footer Text */
+.footer-text {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #ffffff;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+}

@@ -1,0 +1,759 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{775886B4-15D4-4979-B4EC-69975B1FB4D3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RubTechDashBaord</RootNamespace>
+    <AssemblyName>RubTechDashBaord</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard.aspx.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashBoard.aspx.designer.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Event.aspx.cs">
+      <DependentUpon>Event.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Event.aspx.designer.cs">
+      <DependentUpon>Event.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Eventdetails.aspx.cs">
+      <DependentUpon>Eventdetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Eventdetails.aspx.designer.cs">
+      <DependentUpon>Eventdetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Foot-MenuList.aspx.cs">
+      <DependentUpon>Foot-MenuList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Foot-MenuList.aspx.designer.cs">
+      <DependentUpon>Foot-MenuList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgot-password.aspx.cs">
+      <DependentUpon>forgot-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgot-password.aspx.designer.cs">
+      <DependentUpon>forgot-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forms-elements.aspx.cs">
+      <DependentUpon>forms-elements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forms-elements.aspx.designer.cs">
+      <DependentUpon>forms-elements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IRMRAEC.aspx.cs">
+      <DependentUpon>IRMRAEC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IRMRAEC.aspx.designer.cs">
+      <DependentUpon>IRMRAEC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ISOTC.aspx.cs">
+      <DependentUpon>ISOTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ISOTC.aspx.designer.cs">
+      <DependentUpon>ISOTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuList.aspx.cs">
+      <DependentUpon>MenuList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuList.aspx.designer.cs">
+      <DependentUpon>MenuList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="news.aspx.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="news.aspx.designer.cs">
+      <DependentUpon>news.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newsletters.aspx.cs">
+      <DependentUpon>newsletters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newsletters.aspx.designer.cs">
+      <DependentUpon>newsletters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NRCK.aspx.cs">
+      <DependentUpon>NRCK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NRCK.aspx.designer.cs">
+      <DependentUpon>NRCK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RCAE.aspx.cs">
+      <DependentUpon>RCAE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RCAE.aspx.designer.cs">
+      <DependentUpon>RCAE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registrations.aspx.cs">
+      <DependentUpon>Registrations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registrations.aspx.designer.cs">
+      <DependentUpon>Registrations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportdetails.aspx.cs">
+      <DependentUpon>Reportdetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportdetails.aspx.designer.cs">
+      <DependentUpon>Reportdetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rubtech.Master.cs">
+      <DependentUpon>Rubtech.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rubtech.Master.designer.cs">
+      <DependentUpon>Rubtech.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TechnicalAbstract.aspx.cs">
+      <DependentUpon>TechnicalAbstract.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechnicalAbstract.aspx.designer.cs">
+      <DependentUpon>TechnicalAbstract.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tender-quotation.aspx.cs">
+      <DependentUpon>tender-quotation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tender-quotation.aspx.designer.cs">
+      <DependentUpon>tender-quotation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestBall.aspx.cs">
+      <DependentUpon>TestBall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestBall.aspx.designer.cs">
+      <DependentUpon>TestBall.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vacancy.aspx.cs">
+      <DependentUpon>vacancy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vacancy.aspx.designer.cs">
+      <DependentUpon>vacancy.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Angular_components\AddMemberJoinForm.aspx" />
+    <Content Include="Angular_components\angular-alert\angular-confirm.css" />
+    <Content Include="Angular_components\angular-alert\angular-confirm.js" />
+    <Content Include="Angular_components\angular-alert\SweetAlert.js" />
+    <Content Include="Angular_components\angular-animate\angular-animate.js" />
+    <Content Include="Angular_components\angular-base64-upload\angular-base64-upload.min.js" />
+    <Content Include="Angular_components\angular-bootstrap\ui-bootstrap-tpls.min.js" />
+    <Content Include="Angular_components\angular-carousel\angular-carousel.css" />
+    <Content Include="Angular_components\angular-carousel\angular-carousel.js" />
+    <Content Include="Angular_components\angular-carousel\angular-flexslider.js" />
+    <Content Include="Angular_components\angular-carousel\angular-slick.js" />
+    <Content Include="Angular_components\angular-carousel\flexslider.css" />
+    <Content Include="Angular_components\angular-carousel\hammer.min.js" />
+    <Content Include="Angular_components\angular-carousel\jquery.flexslider.js" />
+    <Content Include="Angular_components\angular-checkbox-group\checklist-model.js" />
+    <Content Include="Angular_components\angular-count-to\angular-count-to.min.js" />
+    <Content Include="Angular_components\angular-datatable\angular-datatables.css" />
+    <Content Include="Angular_components\angular-datatable\angular-datatables.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\buttons.dataTables.min.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\dataTables.bootstrap.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\dataTables.bootstrap.min.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\dataTables.bootstrap4.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\dataTables.bootstrap4.min_old.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\dataTables.foundation.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\dataTables.foundation.min.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\dataTables.jqueryui.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\dataTables.jqueryui.min.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\dataTables.material.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\dataTables.material.min.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\dataTables.semanticui.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\dataTables.semanticui.min.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\dataTables.uikit.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\dataTables.uikit.min.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\jquery.dataTables.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\jquery.dataTables.min.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\css\responsive.dataTables.min.css" />
+    <Content Include="Angular_components\angular-datatable\DataTable\images\favicon.ico" />
+    <Content Include="Angular_components\angular-datatable\DataTable\images\prototype\prototype.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\images\prototype\validation.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\images\sort_asc.png" />
+    <Content Include="Angular_components\angular-datatable\DataTable\images\sort_asc_disabled.png" />
+    <Content Include="Angular_components\angular-datatable\DataTable\images\sort_both.png" />
+    <Content Include="Angular_components\angular-datatable\DataTable\images\sort_desc.png" />
+    <Content Include="Angular_components\angular-datatable\DataTable\images\sort_desc_disabled.png" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\dataTables.bootstrap.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\dataTables.bootstrap.min.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\dataTables.bootstrap4.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\dataTables.foundation.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\dataTables.foundation.min.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\dataTables.jqueryui.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\dataTables.jqueryui.min.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\dataTables.material.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\dataTables.material.min.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\dataTables.responsive.min.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\dataTables.semanticui.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\dataTables.semanticui.min.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\dataTables.uikit.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\dataTables.uikit.min.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\jquery.dataTables.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\jquery.dataTables.min.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\jquery.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\js\tableEditor.js" />
+    <Content Include="Angular_components\angular-datatable\jquery.dataTables.min.js" />
+    <Content Include="Angular_components\angular-dynamic-locale\tmhDynamicLocale.js" />
+    <Content Include="Angular_components\angular-html-editor\textAngular.min.js" />
+    <Content Include="Angular_components\angular-loadash\lodash.js" />
+    <Content Include="Angular_components\angular-loading-bar\build\loading-bar.min.css" />
+    <Content Include="Angular_components\angular-loading-bar\build\loading-bar.min.js" />
+    <Content Include="Angular_components\angular-material\angular-aria.js" />
+    <Content Include="Angular_components\angular-material\angular-material.min.css" />
+    <Content Include="Angular_components\angular-material\angular-material.min.js" />
+    <Content Include="Angular_components\angular-material\angular-messages.js" />
+    <Content Include="Angular_components\angular-moment\angular-moment-picker.min.css" />
+    <Content Include="Angular_components\angular-moment\angular-moment-picker.min.js" />
+    <Content Include="Angular_components\angular-moment\angular-moment.js" />
+    <Content Include="Angular_components\angular-moment\moment-with-locales.js" />
+    <Content Include="Angular_components\angular-moment\moment.js" />
+    <Content Include="Angular_components\angular-multiselect\angular-bootstrap-multiselect.min.js" />
+    <Content Include="Angular_components\angular-ngToast\ngToast-animations.css" />
+    <Content Include="Angular_components\angular-ngToast\ngToast-animations.min.css" />
+    <Content Include="Angular_components\angular-ngToast\ngToast.css" />
+    <Content Include="Angular_components\angular-ngToast\ngToast.js" />
+    <Content Include="Angular_components\angular-ngToast\ngToast.min.css" />
+    <Content Include="Angular_components\angular-ngToast\ngToast.min.js" />
+    <Content Include="Angular_components\angular-oi-select\oi-select.js" />
+    <Content Include="Angular_components\angular-oi-select\select.css" />
+    <Content Include="Angular_components\angular-sanitize\angular-sanitize.js" />
+    <Content Include="Angular_components\angular-scroll\angular-scroll.min.js" />
+    <Content Include="Angular_components\angular-storage\angular-local-storage.js" />
+    <Content Include="Angular_components\angular-toaster\toastr.min.css" />
+    <Content Include="Angular_components\angular-toaster\toastr.min.js" />
+    <Content Include="Angular_components\angular-toggle-switch\angular-toggle-switch.css" />
+    <Content Include="Angular_components\angular-toggle-switch\angular-toggle-switch.min.js" />
+    <Content Include="Angular_components\angular-ui-router\release\angular-ui-router.min.js" />
+    <Content Include="Angular_components\angular-validate\angular-validate.js" />
+    <Content Include="Angular_components\angular-validate\jquery.validate.min.js" />
+    <Content Include="Angular_components\angularPageSlider\dirPagination.js" />
+    <Content Include="Angular_components\angular\angular.min.js" />
+    <Content Include="Angular_components\angular_morris.js\angular-morris.js" />
+    <Content Include="Angular_components\angular_morris.js\angular-morris.min.js" />
+    <Content Include="Angular_components\angular_morris.js\morris.min.js" />
+    <Content Include="Angular_components\angular_morris.js\raphael-min.js" />
+    <Content Include="Angular_components\bootstrap\bootstrap-datepicker\css\bootstrap-datepicker.min.css" />
+    <Content Include="Angular_components\bootstrap\bootstrap-datepicker\js\bootstrap-datepicker.min.js" />
+    <Content Include="Angular_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Angular_components\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Angular_components\bootstrap\dist\js\bootstrap.min-old.js" />
+    <Content Include="Angular_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Angular_components\Chart.js\Chart.min.js" />
+    <Content Include="Angular_components\datatables.net-buttons\js\angular-datatables.buttons.min.js" />
+    <Content Include="Angular_components\datatables.net-buttons\js\buttons.colVis.min.js" />
+    <Content Include="Angular_components\datatables.net-buttons\js\buttons.flash.min.js" />
+    <Content Include="Angular_components\datatables.net-buttons\js\buttons.html5.min.js" />
+    <Content Include="Angular_components\datatables.net-buttons\js\buttons.print.min.js" />
+    <Content Include="Angular_components\datatables.net-buttons\js\dataTables.buttons.js" />
+    <Content Include="Angular_components\datatables.net-buttons\js\dataTables.buttons.min.js" />
+    <Content Include="Angular_components\datatables.net-buttons\js\FileSaver.js" />
+    <Content Include="Angular_components\datatables.net-buttons\js\jszip.min.js" />
+    <Content Include="Angular_components\datatables.net-buttons\js\pdfmake.min.js" />
+    <Content Include="Angular_components\datatables.net-buttons\js\vfs_fonts.js" />
+    <Content Include="Angular_components\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Angular_components\font-awesome\fonts\fontawesome-webfonte0a5.svg" />
+    <Content Include="Angular_components\jquery\dist\jquery.min.js" />
+    <Content Include="Angular_components\jquery\jquery-3.1.0.min.js" />
+    <Content Include="Angular_components\jquery\jquery.validate.min.js" />
+    <Content Include="Angular_components\json3\lib\json3.min.js" />
+    <Content Include="Angular_components\metisMenu\dist\metisMenu.min.css" />
+    <Content Include="Angular_components\metisMenu\dist\metisMenu.min.js" />
+    <Content Include="Angular_components\oclazyload\dist\ocLazyLoad.min.js" />
+    <Content Include="Angular_components\SweetyAlert\css\sweetalert.css" />
+    <Content Include="Angular_components\SweetyAlert\js\sweetalert.min.js" />
+    <Content Include="Angular_components\SweetyAlert\js\sweetalert1.min.js" />
+    <Content Include="Angular_components\SweetyAlert\SweetAlert.js" />
+    <Content Include="Angular_components\tabs\jquery.responsiveTabs.js" />
+    <Content Include="angular_scripts\app.js" />
+    <Content Include="angular_scripts\Controllers\AdvertisementController.js" />
+    <Content Include="angular_scripts\Controllers\BannerController.js" />
+    <Content Include="angular_scripts\Controllers\EventDetailsController.js" />
+    <Content Include="angular_scripts\Controllers\FooterMenuController.js" />
+    <Content Include="angular_scripts\Controllers\GalleryEventController.js" />
+    <Content Include="angular_scripts\Controllers\GalleryReportController.js" />
+    <Content Include="angular_scripts\Controllers\MagzineController.js" />
+    <Content Include="angular_scripts\Controllers\MenuListController.js" />
+    <Content Include="angular_scripts\Controllers\MessageController.js" />
+    <Content Include="angular_scripts\Controllers\NewsLetterController.js" />
+    <Content Include="angular_scripts\Controllers\RegisterPageController.js" />
+    <Content Include="angular_scripts\Controllers\ContactController.js" />
+    <Content Include="angular_scripts\Controllers\ReportdetailsController.js" />
+    <Content Include="angular_scripts\Controllers\TeamController.js" />
+    <Content Include="angular_scripts\Controllers\TechnicalAbstractController.js" />
+    <Content Include="angular_scripts\directive\directive.js" />
+    <Content Include="angular_scripts\services\ApiCallService.js" />
+    <Content Include="angular_scripts\services\StorageService.js" />
+    <Content Include="assets\css\app.min.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\custom.min.css" />
+    <Content Include="assets\css\icons.min.css" />
+    <Content Include="assets\css\index.css" />
+    <Content Include="assets\css\sweetalert2new.min.css" />
+    <Content Include="assets\fonts\bootstrap-iconsbf04.html" />
+    <Content Include="assets\fonts\boxicons.html" />
+    <Content Include="assets\fonts\boxiconsd41d.svg" />
+    <Content Include="assets\fonts\materialdesignicons-webfont1d2d.html" />
+    <Content Include="assets\fonts\remixicondf6d.html" />
+    <Content Include="assets\fonts\remixicondf6d.svg" />
+    <Content Include="assets\images\effect-pattern\auth-effect-2.png" />
+    <Content Include="assets\images\effect-pattern\auth-effect.png" />
+    <Content Include="assets\images\favicon.png" />
+    <Content Include="assets\images\icons\job.png" />
+    <Content Include="assets\images\icons\news-thumb.jpg" />
+    <Content Include="assets\images\icons\newsletter-thumb.jpg" />
+    <Content Include="assets\images\icons\tender-quotation.png" />
+    <Content Include="assets\images\IRMRA-logo-login.png" />
+    <Content Include="assets\images\IRMRA-logo.png" />
+    <Content Include="assets\images\logo-sm.png" />
+    <Content Include="assets\images\svg\crypto-icons\aave.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ada.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ant.svg" />
+    <Content Include="assets\images\svg\crypto-icons\btc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\dash.svg" />
+    <Content Include="assets\images\svg\crypto-icons\eth.svg" />
+    <Content Include="assets\images\svg\crypto-icons\fil.svg" />
+    <Content Include="assets\images\svg\crypto-icons\ltc.svg" />
+    <Content Include="assets\images\svg\crypto-icons\sol.svg" />
+    <Content Include="assets\images\svg\crypto-icons\xmr.svg" />
+    <Content Include="assets\images\user-icon.jpg" />
+    <Content Include="assets\js\app.js" />
+    <Content Include="assets\js\app.min.js" />
+    <Content Include="assets\js\layout.js" />
+    <Content Include="assets\js\pages\apexcharts-area.init.js" />
+    <Content Include="assets\js\pages\apexcharts-bar.init.js" />
+    <Content Include="assets\js\pages\apexcharts-boxplot.init.js" />
+    <Content Include="assets\js\pages\apexcharts-bubble.init.js" />
+    <Content Include="assets\js\pages\apexcharts-candlestick.init.js" />
+    <Content Include="assets\js\pages\apexcharts-column.init.js" />
+    <Content Include="assets\js\pages\apexcharts-heatmap.init.js" />
+    <Content Include="assets\js\pages\apexcharts-line.init.js" />
+    <Content Include="assets\js\pages\apexcharts-mixed.init.js" />
+    <Content Include="assets\js\pages\apexcharts-pie.init.js" />
+    <Content Include="assets\js\pages\apexcharts-polararea.init.js" />
+    <Content Include="assets\js\pages\apexcharts-radar.init.js" />
+    <Content Include="assets\js\pages\apexcharts-radialbar.init.js" />
+    <Content Include="assets\js\pages\apexcharts-scatter.init.js" />
+    <Content Include="assets\js\pages\apexcharts-timeline.init.js" />
+    <Content Include="assets\js\pages\apexcharts-treemap.init.js" />
+    <Content Include="assets\js\pages\api-key.init.js" />
+    <Content Include="assets\js\pages\bootstrap-icons.init.js" />
+    <Content Include="assets\js\pages\calendar.init.js" />
+    <Content Include="assets\js\pages\card.init.js" />
+    <Content Include="assets\js\pages\coming-soon.init.js" />
+    <Content Include="assets\js\pages\contact.init.js" />
+    <Content Include="assets\js\pages\dashboard-ecommerce.init.js" />
+    <Content Include="assets\js\pages\datatables.init.js" />
+    <Content Include="assets\js\pages\flag-input.init.js" />
+    <Content Include="assets\js\pages\form-advanced.init.js" />
+    <Content Include="assets\js\pages\form-editor.init.js" />
+    <Content Include="assets\js\pages\form-file-upload.init.js" />
+    <Content Include="assets\js\pages\form-input-spin.init.js" />
+    <Content Include="assets\js\pages\form-masks.init.js" />
+    <Content Include="assets\js\pages\form-pickers.init.js" />
+    <Content Include="assets\js\pages\form-validation.init.js" />
+    <Content Include="assets\js\pages\form-wizard.init.js" />
+    <Content Include="assets\js\pages\gmaps.init.js" />
+    <Content Include="assets\js\pages\gridjs.init.js" />
+    <Content Include="assets\js\pages\leaderboard.init.js" />
+    <Content Include="assets\js\pages\leaflet-map.init.js" />
+    <Content Include="assets\js\pages\leaflet-us-states.js" />
+    <Content Include="assets\js\pages\listjs.init.js" />
+    <Content Include="assets\js\pages\materialdesign.list.js" />
+    <Content Include="assets\js\pages\modal.init.js" />
+    <Content Include="assets\js\pages\nestable.init.js" />
+    <Content Include="assets\js\pages\notifications.init.js" />
+    <Content Include="assets\js\pages\passowrd-create.init.js" />
+    <Content Include="assets\js\pages\password-addon.init.js" />
+    <Content Include="assets\js\pages\phosphor-icons.init.js" />
+    <Content Include="assets\js\pages\plugins\lord-icon-2.1.0.js" />
+    <Content Include="assets\js\pages\pricing.init.js" />
+    <Content Include="assets\js\pages\profile-setting.init.js" />
+    <Content Include="assets\js\pages\profile.init.js" />
+    <Content Include="assets\js\pages\range-sliders.init.js" />
+    <Content Include="assets\js\pages\rating.init.js" />
+    <Content Include="assets\js\pages\remix-icons-listing.js" />
+    <Content Include="assets\js\pages\search-result.init.js" />
+    <Content Include="assets\js\pages\sweetalertnew.min.js" />
+    <Content Include="assets\js\pages\sweetalerts.init.js" />
+    <Content Include="assets\js\pages\swiper.init.js" />
+    <Content Include="assets\js\pages\team.init.js" />
+    <Content Include="assets\js\pages\timeline.init.js" />
+    <Content Include="assets\js\pages\tom-select.init.js" />
+    <Content Include="assets\js\pages\two-step-verification.init.js" />
+    <Content Include="assets\js\pages\vector-maps.init.js" />
+    <Content Include="assets\js\pages\widgets.init.js" />
+    <Content Include="assets\js\plugins.js" />
+    <Content Include="assets\js\sweetalert2%40110000.js" />
+    <Content Include="assets\js\sweetalert2.js" />
+    <Content Include="assets\js\vendor.min.js" />
+    <Content Include="assets\libs\%40ckeditor\ckeditor5-build-classic\build\ckeditor.js" />
+    <Content Include="assets\libs\%40simonwep\pickr\pickr.min.js" />
+    <Content Include="assets\libs\%40simonwep\pickr\themes\classic.min.css" />
+    <Content Include="assets\libs\%40simonwep\pickr\themes\monolith.min.css" />
+    <Content Include="assets\libs\%40simonwep\pickr\themes\nano.min.css" />
+    <Content Include="assets\libs\%40tarekraafat\autocomplete.js\autoComplete.min.js" />
+    <Content Include="assets\libs\%40tarekraafat\autocomplete.js\css\autoComplete.css" />
+    <Content Include="assets\libs\%40tarekraafat\autocomplete.js\css\images\search.svg" />
+    <Content Include="assets\libs\apexcharts\apexcharts.min.js" />
+    <Content Include="assets\libs\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\libs\cleave.js\cleave.min.js" />
+    <Content Include="assets\libs\dropzone\dropzone-min.js" />
+    <Content Include="assets\libs\dropzone\dropzone.css" />
+    <Content Include="assets\libs\fullcalendar\main.min.css" />
+    <Content Include="assets\libs\fullcalendar\main.min.js" />
+    <Content Include="assets\libs\glightbox\css\glightbox.min.css" />
+    <Content Include="assets\libs\glightbox\js\glightbox.min.js" />
+    <Content Include="assets\libs\gmaps\gmaps.min.js" />
+    <Content Include="assets\libs\gridjs\gridjs.umd.js" />
+    <Content Include="assets\libs\gridjs\theme\mermaid.min.css" />
+    <Content Include="assets\libs\jsvectormap\css\jsvectormap.min.css" />
+    <Content Include="assets\libs\jsvectormap\js\jsvectormap.min.js" />
+    <Content Include="assets\libs\jsvectormap\maps\canada.js" />
+    <Content Include="assets\libs\jsvectormap\maps\russia.js" />
+    <Content Include="assets\libs\jsvectormap\maps\spain.js" />
+    <Content Include="assets\libs\jsvectormap\maps\us-merc-en.js" />
+    <Content Include="assets\libs\jsvectormap\maps\world-merc.js" />
+    <Content Include="assets\libs\leaflet\images\layers-2x.png" />
+    <Content Include="assets\libs\leaflet\images\layers.png" />
+    <Content Include="assets\libs\leaflet\images\marker-icon.png" />
+    <Content Include="assets\libs\leaflet\leaflet.css" />
+    <Content Include="assets\libs\leaflet\leaflet.js" />
+    <Content Include="assets\libs\list.js\list.min.js" />
+    <Content Include="assets\libs\list.pagination.js\list.pagination.min.js" />
+    <Content Include="assets\libs\masonry-layout\masonry.pkgd.min.js" />
+    <Content Include="assets\libs\moment\min\moment.min.js" />
+    <Content Include="assets\libs\moment\moment.js" />
+    <Content Include="assets\libs\multi.js\multi.min.css" />
+    <Content Include="assets\libs\multi.js\multi.min.js" />
+    <Content Include="assets\libs\nouislider\nouislider.min.css" />
+    <Content Include="assets\libs\nouislider\nouislider.min.js" />
+    <Content Include="assets\libs\prismjs\prism.js" />
+    <Content Include="assets\libs\rater-js\index.js" />
+    <Content Include="assets\libs\simplebar\simplebar.min.js" />
+    <Content Include="assets\libs\sortablejs\Sortable.min.js" />
+    <Content Include="assets\libs\sweetalert2\sweetalert2.min.css" />
+    <Content Include="assets\libs\sweetalert2\sweetalert2.min.js" />
+    <Content Include="assets\libs\swiper\swiper-bundle.min.css" />
+    <Content Include="assets\libs\swiper\swiper-bundle.min.js" />
+    <Content Include="assets\libs\tom-select\css\tom-select.bootstrap5.min.css" />
+    <Content Include="assets\libs\tom-select\js\plugins\remove_button.js" />
+    <Content Include="assets\libs\tom-select\js\tom-select.base.min.js" />
+    <Content Include="assets\libs\tom-select\js\tom-select.complete.min.js" />
+    <Content Include="assets\libs\wnumb\wNumb.min.js" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="DashBoard.aspx" />
+    <Content Include="Event.aspx" />
+    <Content Include="Eventdetails.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Foot-MenuList.aspx" />
+    <Content Include="forgot-password.aspx" />
+    <Content Include="forms-elements.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="index.aspx" />
+    <Content Include="IRMRAEC.aspx" />
+    <Content Include="ISOTC.aspx" />
+    <Content Include="MenuList.aspx" />
+    <Content Include="news.aspx" />
+    <Content Include="newsletters.aspx" />
+    <Content Include="NRCK.aspx" />
+    <Content Include="RCAE.aspx" />
+    <Content Include="Registrations.aspx" />
+    <Content Include="Report.aspx" />
+    <Content Include="Reportdetails.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Angular_components\angular-datatable\DataTable\data.json" />
+    <Content Include="Angular_components\angular-datatable\DataTable\images\Sorting icons.psd" />
+    <Content Include="Angular_components\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Angular_components\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Angular_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Angular_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Angular_components\bootstrap\dist\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Angular_components\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Angular_components\font-awesome\fonts\fontawesome-webfonte0a5.eot" />
+    <Content Include="Angular_components\font-awesome\fonts\fontawesome-webfonte0a5.ttf" />
+    <Content Include="Angular_components\font-awesome\fonts\fontawesome-webfonte0a5.woff" />
+    <Content Include="Angular_components\font-awesome\fonts\fontawesome-webfonte0a5.woff2" />
+    <Content Include="Rubtech.Master" />
+    <Content Include="assets\fonts\bootstrap-iconsbf04.woff" />
+    <Content Include="assets\fonts\boxicons.eot" />
+    <Content Include="assets\fonts\boxicons.ttf" />
+    <Content Include="assets\fonts\boxicons.woff" />
+    <Content Include="assets\fonts\materialdesignicons-webfont1d2d.eot" />
+    <Content Include="assets\fonts\materialdesignicons-webfont1d2d.ttf" />
+    <Content Include="assets\fonts\materialdesignicons-webfont1d2d.woff" />
+    <Content Include="assets\fonts\materialdesignicons-webfontd41d.eot" />
+    <Content Include="assets\fonts\remixicondf6d.eot" />
+    <Content Include="assets\fonts\remixicondf6d.ttf" />
+    <Content Include="assets\fonts\remixicondf6d.woff" />
+    <None Include="Scripts\jquery-3.7.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.0.js" />
+    <Content Include="Scripts\jquery-3.7.0.min.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.js" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="TechnicalAbstract.aspx" />
+    <Content Include="tender-quotation.aspx" />
+    <Content Include="TestBall.aspx" />
+    <Content Include="vacancy.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.0.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>23813</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:23813/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
