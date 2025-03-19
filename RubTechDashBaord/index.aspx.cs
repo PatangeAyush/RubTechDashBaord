@@ -11,7 +11,7 @@ namespace RubTechDashBaord
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void Button1_Click1(object sender, EventArgs e)
@@ -28,7 +28,10 @@ namespace RubTechDashBaord
                 }
                 else if (txtUsername.Text == "rubtech" && txtPassword.Text == "rubtech@#2025")
                 {
-                    ScriptManager.RegisterStartupScript(this, GetType(), "Popup", "Swal.fire({ title: 'Successful!', text: 'Logged in!', icon: 'success' }).then(()=>location.href='DashBoard.aspx')", true);
+                    ScriptManager.RegisterStartupScript(this, GetType(), "Popup", "Swal.fire({ title: 'Successful!', text: 'Logged in!', icon: 'success' })", true);
+                    Session["UserRegistered"] = "true";
+
+                    Response.Redirect("DashBoard.aspx");
                 }
                 else
                 {

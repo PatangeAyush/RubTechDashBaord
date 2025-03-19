@@ -11,11 +11,11 @@
     <link href="assets/css/metismenu.min.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="http://cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.css"/>
-    <link rel="stylesheet" href="http://cdn.datatables.net/responsive/1.0.2/css/dataTables.responsive.css"/>
+    <link rel="stylesheet" href="http://cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.css" />
+    <link rel="stylesheet" href="http://cdn.datatables.net/responsive/1.0.2/css/dataTables.responsive.css" />
     <link href="assets\css\app.min.css" rel="stylesheet" />
     <script src="angular_scripts/Controllers/GalleryEventController.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../assets\js\app.js"></script>
 
     <link rel="shortcut icon" href="assets/images/favicon.png">
@@ -157,7 +157,10 @@
 
                                     <div class="dropdown-divider"></div>
 
-                                    <a class="dropdown-item" href="index.aspx" target="_self"> <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i><span class="align-middle" data-key="t-logout">Logout</span></a>
+                                    <asp:LinkButton ID="btnLogout" runat="server" OnClick="btn_Logout">
+    <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i>
+    <span class="align-middle" data-key="t-logout">Logout</span>
+                                    </asp:LinkButton>
                                 </div>
                             </div>
                         </div>
@@ -337,9 +340,9 @@
     <script src="assets/js/app.js"></script>
 
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.3/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" language="javascript" src="//cdn.datatables.net/responsive/1.0.2/js/dataTables.responsive.js"></script>
-<script type="text/javascript" language="javascript" src="//cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/1.10.3/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/responsive/1.0.2/js/dataTables.responsive.js"></script>
+    <script type="text/javascript" language="javascript" src="//cdn.datatables.net/plug-ins/a5734b29083/integration/bootstrap/3/dataTables.bootstrap.js"></script>
 
 </body>
 </html>
